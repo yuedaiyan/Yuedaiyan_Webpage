@@ -1,0 +1,192 @@
+.header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+
+    z-index: 200;
+
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right:0px;
+
+        background-color: white;
+
+     border-bottom: 1px solid #bbbbbb;
+    /* background-color: #0562ed; */
+}
+
+/* 左部分样式 */
+.left-part {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px 20px 0px 28px;
+    min-width: 150px;
+    /* 防止flexbox被压缩 */
+    flex-shrink: 0;
+}
+.menuButton {
+    /* height: 25px; */
+    width: 25px;
+    margin: 0px 15px 0px 0px;
+}
+.youtubeLogo {
+    /* height: 22px; */
+    width: 100px;
+    margin: 0px 0px 0px 10px;
+    padding: 0px 0px 1px 0px;
+}
+
+/* 中间部分样式 */
+.middle-part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px 0px 20px;
+
+    flex: 1;
+    max-width: 500px;
+}
+/* 搜索栏 */
+.searchBar {
+    height: 40px;
+    flex: 1 ;
+    width:95px;
+    border: 1px solid #dedede;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    box-shadow: inset 0px 0px 1px #0000005c;
+    padding: 0px 0px 0px 20px;
+}
+/* 搜索按钮悬停交互效果 */
+.searchBar::placeholder {
+    color: #919191;
+}
+/* 输入框点击交互效果(光标定位) */
+.searchBar:focus{
+    outline: 1px solid #0562ed;
+    outline-offset: -1px;
+    z-index: 200;
+}
+.searchBar:focus::placeholder{
+    color: #e1e1e1;
+}
+
+/* 普通搜索按钮 */
+.searchButton-area {
+    background-color: #efefef;
+    width: 65px;
+    height: 40px;
+    margin: 0px 5px 0px -1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dadada;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.searchButton {
+    height: 24px;
+    width: 24px;
+}
+
+/* 声音搜索按钮 */
+.voiceSearchButton-area {
+    margin: 0px 0px 0px 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    padding: 6px 6px 6px 6px;
+}
+
+/* 右部分样式 */
+.right-part {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0px 0px 0px 20px;
+
+    /* 防止flexbox被压缩 */
+    flex-shrink: 0;
+}
+.button-1,
+.button-2,
+.button-3,
+.button-4 {
+    height: 25px;
+    margin: 0px 11px 0px 11px;
+}
+.button-4 {
+    border-radius: 100px;
+    height: 30px;
+    margin: 0px 30px 0px 11px;
+}
+
+/* hover */
+.searchButton-area,
+.voiceSearchButton-area,
+.hover-b-1,
+.hover-b-2,
+.hover-b-3 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+}
+.button-4 {
+    cursor: pointer;
+}
+.hover-searchButton,
+.hover-voiceSearchButton,
+.hover-b-1-text,
+.hover-b-2-text,
+.hover-b-3-text {
+    background-color: #606060;
+    padding: 4px 12px 4px 12px;
+    border-radius: 2px;
+    white-space: nowrap;
+    position: absolute;
+    bottom: -50px;
+    color: white;
+    opacity: 0;
+    font-size: 1spx;
+    transition: opacity 0.15s ease;
+         z-index: 200;
+}
+
+.searchButton:hover + .hover-searchButton,
+.voiceSearchButton:hover + .hover-voiceSearchButton,
+.button-1:hover + .hover-b-1-text,
+.button-2:hover + .hover-b-2-text,
+.button-3:hover + .hover-b-3-text {
+    opacity: 1;
+}
+
+/* click */
+.searchButton-area:active {
+    background-color: #e4e4e4;
+}
+
+/* number's tag */
+.numbers {
+    position: absolute;
+    top: -4px;
+    right: 6px;
+    background-color: #d50000;
+    width: 18px;
+    height: 18px;
+    color: white;
+    font-size: 11px;
+    border: 2px solid white;
+    padding: 6px;
+    border-radius: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
